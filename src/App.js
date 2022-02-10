@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { Component } from 'react/cjs/react.production.min';
+// import { Component } from 'react/cjs/react.production.min';
 
 //State props
 //Stateless
