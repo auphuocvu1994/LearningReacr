@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import Cal from './Caculator/Cal';
 import React from 'react';
 // import { Component } from 'react/cjs/react.production.min';
 
@@ -37,7 +38,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello world</h1>
+        <h1>Calculator</h1>
+        <Cal/>
       </div>
     );
   }
