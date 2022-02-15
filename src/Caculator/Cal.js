@@ -24,9 +24,9 @@ class Button extends React.Component {
 
 
 class Cal extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     //Gan gia tri mac dinh cho state
     state = {
