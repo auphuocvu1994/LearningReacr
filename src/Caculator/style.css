@@ -19,9 +19,28 @@ button.btn-Submit {
     width: 80%;
     background-color: rgb(238, 94, 94);
     height: 50px;
+    color: white;
+    font-size: 24px;
 }
 
 button.btn-Cancel {
     height: auto;
     width: auto;
+}
+
+
+/* Grid Button  */
+.block-number {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-number button {
+    flex: 1 0 21%; /* explanation below */
+    margin: 5px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }

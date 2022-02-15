@@ -3,7 +3,7 @@
     flex-wrap: wrap;
 }
 
-button {
+.block-number button {
     flex: 1 0 21%; /* explanation below */
     margin: 5px;
     height: 100px;
