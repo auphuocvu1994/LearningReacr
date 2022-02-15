@@ -6,7 +6,6 @@ import React from 'react';
 class Button extends React.Component {
     constructor() {
         super();
-
         this.onClick = this.onClick.bind(this);
     }
 
