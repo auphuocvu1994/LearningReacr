@@ -44,13 +44,13 @@ class Cal extends React.Component {
                 <div className="form-group">
                     <div className='input-group'>
                         <input type="text" readOnly 
-                            class="form-control"  placeholder="Phep tinh"
+                            className="form-control"  placeholder="Phep tinh"
 
                             value={this.state.item}
 
                         />
                         <input type="text" readOnly 
-                            class="form-control" placeholder="Ket qua" />
+                            className="form-control" placeholder="Ket qua" />
                     </div>
 
                     <button className='btn-Submit'>AC</button>

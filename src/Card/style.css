@@ -53,7 +53,7 @@ span.card__title {
     display: block;
 }
 
-.card__media a {
+.card__media span {
     margin: 25px 20px 40px !important;
     display: inline-block;
     color: white;
