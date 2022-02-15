@@ -17,7 +17,7 @@ class Button extends React.Component {
 
     render() {
         // click thì gọi hàm click - còn text button thì lấy từ props letter
-        return (<button onClick={props.onClick}>{this.props.letter}</button>);
+        return (<button >{this.props.letter}</button>);
     }
 }
 
