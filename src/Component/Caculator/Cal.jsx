@@ -23,18 +23,57 @@ class Button extends React.Component {
 
 
 class Cal extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
 
     //Gan gia tri mac dinh cho state
     state = {
-        item: "",
-        value: ""
+        question: "",
+        answer: ""
     };
+    // Event AC
+    resetAC = () => {
+        this.setState({ question: '', answer: '' });
+    }
+    // Event C
+    removeC = () => {
+        var str = this.state.question;
+        str = str.substr(0, str.length - 1);
+        this.setState({ question: str });
+    }
 
-    clickNumButton = value_Btn => {
-        this.setState({ item: this.state.item + value_Btn });
+    clickNumButton = valueBtn => {
+
+        if (valueBtn == '=') {
+            if (this.state.question !== '') {
+                var ans = '';
+                try {
+                    ans = eval(this.state.question);
+                }
+                catch (err) {
+                    this.setState({
+                        answer: " Error"
+                    });
+                }
+
+                if (ans === undefined)
+                    this.setState({
+                        answer: " Error"
+                    });
+
+                else if (ans == 'Infinity')
+                    this.setState({
+                        answer: " Error"
+                    });
+                else
+                    this.setState({
+                        answer: ans,
+                        question: this.state.question
+                    });
+            } else {
+                this.setState({ question: '', answer: '' });
+            }
+        } else {
+            this.setState({ question: this.state.question += valueBtn })
+        }
     };
 
 
@@ -43,17 +82,24 @@ class Cal extends React.Component {
             <div className='calculator-wrapper'>
                 <div className="form-group">
                     <div className='input-group'>
-                        <input type="text" readOnly 
-                            className="form-control"  placeholder="Phep tinh"
+                        <input type="text" readOnly
+                            className="form-control" placeholder="Phep tinh"
 
-                            value={this.state.item}
+                            value={this.state.question}
 
                         />
-                        <input type="text" readOnly 
-                            className="form-control" placeholder="Ket qua" />
+                        <input type="text" readOnly
+                            className="form-control" placeholder="Ket qua"
+
+                            value={this.state.answer}
+                        />
                     </div>
 
-                    <button className='btn-Submit'>AC</button>
+                    <div className='group-btn'>
+                        <button className='btn-Submit' onClick={this.resetAC}>AC</button>
+                        <button className='btn-Remove' onClick={this.removeC}>C</button>
+
+                    </div>
 
                     <div className='block-number'>
                         <Button letter="7" handleButton={this.clickNumButton} />

@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import Cal from './Caculator/Cal';
-import Card from './Card/Card';
+import Cal from './Component/Caculator/Cal';
+import Card from './Component/Card/Card';
 import React from 'react';
 // import { Component } from 'react/cjs/react.production.min';
 
