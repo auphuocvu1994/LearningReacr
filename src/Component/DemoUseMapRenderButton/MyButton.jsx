@@ -3,10 +3,11 @@ import './style.css';
 import React from 'react';
 
 class MyButton extends React.Component {
-    arr = ['7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '*', '0', '.', '=', '/']
+
     constructor(props) {
         super(props);
-        this.handleLatinButton = this.handleLatinButton.bind(this);
+        // this.handleLatinButton = this.handleLatinButton.bind(this);
+        this.arr = ['7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '*', '0', '.', '=', '/'];
     }
     state = {
         item: ""
@@ -19,19 +20,18 @@ class MyButton extends React.Component {
 
     }
 
-    handleLatinButton = value => {
-        this.setState({ item: this.state.item + value });
-    };
+    // handleLatinButton = value => {
+    //     this.setState({ item: this.state.item + value });
+    // };
 
 
     render() {
 
-        const listItems = arr.map((numbers) =>
-            <button value={numbers} onClick={e => this.handleInput(e, "value")}>{numbers}</button>
-        );
         return (
             <div className='block-number'>
-                {listItems}
+                {this.arr.map((numbers) =>
+                    <button value={numbers} onClick={e => this.handleInput(e, "value")} key={numbers}>{numbers}</button>
+                )}
             </div>
         );
     }

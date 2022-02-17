@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import Cal from './Component/Caculator/Cal';
-import Card from './Component/Card/Card';
+// import Cal from './Component/Caculator/Cal';
+// import Card from './Component/Card/Card';
+import Calculator from './Component/Caculator/CaculatorUseMap';
+
 import React from 'react';
 // import { Component } from 'react/cjs/react.production.min';
 
@@ -40,10 +42,14 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Calculator</h1>
-        {/* Caculator  */}
-        <Cal/>
+        {/* Caculator use Button Component */}
+        {/* <Cal/> */}
+
+        {/* Caculator use Map render list button  */}
+        <Calculator></Calculator>
         {/* Card  */}
-        <Card ></Card>
+        {/* <Card ></Card> */}
+
       </div>
     );
   }

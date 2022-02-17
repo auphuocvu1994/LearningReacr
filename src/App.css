@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: rebeccapurple;
+  height: 100vh;
 }
 .App h1{
   color: #fafafa;

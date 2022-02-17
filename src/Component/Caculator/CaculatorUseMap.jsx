@@ -2,26 +2,32 @@
 import './style.css';
 import React from 'react';
 
-class Button extends React.Component {
-    constructor() {
-        super();
-        this.onClick = this.onClick.bind(this);
+// class Button extends React.Component {
+//     constructor() {
+//         super();
+//         this.onClick = this.onClick.bind(this);
+//     }
+
+//     //Hàm click khi click thì lấy props handleButton bán bằng props letter
+//     onClick() {
+//         this.props.handleButton(this.props.letter);
+//     }
+
+//     render() {
+//         // click thì gọi hàm click - còn text button thì lấy từ props letter
+//         return (<button onClick={this.onClick}>{this.props.letter}</button>);
+//     }
+// }
+
+
+
+class CaculatorUseMap extends React.Component {
+
+    constructor(props) {
+        super(props);
+        // this.handleLatinButton = this.handleLatinButton.bind(this);
+        this.arr = ['7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '*', '0', '.', '=', '/'];
     }
-
-    //Hàm click khi click thì lấy props handleButton bán bằng props letter
-    onClick() {
-        this.props.handleButton(this.props.letter);
-    }
-
-    render() {
-        // click thì gọi hàm click - còn text button thì lấy từ props letter
-        return (<button onClick={this.onClick}>{this.props.letter}</button>);
-    }
-}
-
-
-
-class Cal extends React.Component {
 
     //Gan gia tri mac dinh cho state
     state = {
@@ -41,9 +47,12 @@ class Cal extends React.Component {
 
     clickNumButton = valueBtn => {
 
-        if (valueBtn == '=') {
+        valueBtn = valueBtn.target.value;
+
+        if (valueBtn === '=') {
             if (this.state.question !== '') {
                 var ans = '';
+                /* eslint-disable */
                 try {
                     ans = eval(this.state.question);
                 }
@@ -58,7 +67,7 @@ class Cal extends React.Component {
                         answer: " Error"
                     });
 
-                else if (ans == 'Infinity')
+                else if (ans === 'Infinity')
                     this.setState({
                         answer: " Error"
                     });
@@ -70,7 +79,7 @@ class Cal extends React.Component {
             } else {
                 this.setState({ question: '', answer: '' });
             }
-        } else {
+        }else{
             this.setState({ question: this.state.question += valueBtn })
         }
     };
@@ -101,22 +110,13 @@ class Cal extends React.Component {
                     </div>
 
                     <div className='block-number'>
-                        <Button letter="7" handleButton={this.clickNumButton} />
-                        <Button letter="8" handleButton={this.clickNumButton} />
-                        <Button letter="9" handleButton={this.clickNumButton} />
-                        <Button letter="+" handleButton={this.clickNumButton} />
-                        <Button letter="4" handleButton={this.clickNumButton} />
-                        <Button letter="5" handleButton={this.clickNumButton} />
-                        <Button letter="6" handleButton={this.clickNumButton} />
-                        <Button letter="-" handleButton={this.clickNumButton} />
-                        <Button letter="1" handleButton={this.clickNumButton} />
-                        <Button letter="2" handleButton={this.clickNumButton} />
-                        <Button letter="3" handleButton={this.clickNumButton} />
-                        <Button letter="*" handleButton={this.clickNumButton} />
-                        <Button letter="0" handleButton={this.clickNumButton} />
-                        <Button letter="." handleButton={this.clickNumButton} />
-                        <Button letter="=" handleButton={this.clickNumButton} />
-                        <Button letter="/" handleButton={this.clickNumButton} />
+                        {this.arr.map((numbers) =>
+                            <button
+                                value={numbers}
+                                onClick={e => this.clickNumButton(e)}
+                                key={numbers} >{numbers}</button>
+                        )
+                        }
                     </div>
 
                 </div>
@@ -125,4 +125,4 @@ class Cal extends React.Component {
     }
 }
 
-export default Cal;
+export default CaculatorUseMap;
