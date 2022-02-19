@@ -1,0 +1,11 @@
+input.form-control {
+    height: 30px;
+    width: 100%;
+    padding: 0 30px;
+}
+
+textarea#textArea {
+    display: block;
+    width: 100%;
+    padding: 20px 30px;
+}

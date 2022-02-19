@@ -2,38 +2,12 @@
 import './App.css';
 // import Cal from './Component/Caculator/Cal';
 // import Card from './Component/Card/Card';
-import Calculator from './Component/Caculator/CaculatorUseMap';
+// import Calculator from './component/Caculator/CaculatorUseMap';
+// import Clock from './component/Clock/Process';
+import GridBtnAudio from './component/GridBtnAudio/GridBtn';
+// import Input from './component/Input/InputShowText';
 
 import React from 'react';
-// import { Component } from 'react/cjs/react.production.min';
-
-//State props
-//Stateless
-// function App() {
-//   return (
-//     // JSX 
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-//Co 2 kieu Component trong React
-// + Class Compononent  (Stalefull Component) -> hiểu rõ hơn về lifecycle
-// + Function Component (Staleless Component)
 
 // Class component 
 class App extends React.Component {
@@ -41,15 +15,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Calculator</h1>
+        {/* <h1>Calculator</h1> */}
         {/* Caculator use Button Component */}
         {/* <Cal/> */}
 
         {/* Caculator use Map render list button  */}
-        <Calculator></Calculator>
+        {/* <Calculator></Calculator> */}
         {/* Card  */}
         {/* <Card ></Card> */}
+        {/* <Clock></Clock> */}
 
+        <GridBtnAudio></GridBtnAudio>
+        {/* <Input></Input> */}
       </div>
     );
   }

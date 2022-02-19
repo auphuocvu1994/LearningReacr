@@ -1,0 +1,21 @@
+.block-number {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btnKey {
+    width: calc(100% / 3 - 10px);
+    background-color: white;
+    height: 100px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btnKey.btnActive {
+    background-color: orange;
+    color: white;
+}
