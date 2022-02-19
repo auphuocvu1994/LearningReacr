@@ -4,8 +4,8 @@ import './App.css';
 // import Card from './Component/Card/Card';
 // import Calculator from './component/Caculator/CaculatorUseMap';
 // import Clock from './component/Clock/Process';
-import GridBtnAudio from './component/GridBtnAudio/GridBtn';
-// import Input from './component/Input/InputShowText';
+import GridBtnAudio from './componentEx/GridBtnAudio/GridBtn';
+// import Input from './componentEx/Input/InputShowText';
 
 import React from 'react';
 
