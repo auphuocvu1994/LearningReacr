@@ -4,8 +4,10 @@ import './App.css';
 // import Card from './Component/Card/Card';
 // import Calculator from './component/Caculator/CaculatorUseMap';
 // import Clock from './component/Clock/Process';
-import GridBtnAudio from './componentEx/GridBtnAudio/GridBtn';
+// import GridBtnAudio from './componentEx/GridBtnAudio/GridBtn';
 // import Input from './componentEx/Input/InputShowText';
+import Search from './componentEx/Search/Search';
+import Test from './componentEx/Search/Test';
 
 import React from 'react';
 
@@ -25,8 +27,12 @@ class App extends React.Component {
         {/* <Card ></Card> */}
         {/* <Clock></Clock> */}
 
-        <GridBtnAudio></GridBtnAudio>
+        {/* <GridBtnAudio></GridBtnAudio> */}
         {/* <Input></Input> */}
+
+        <Search></Search>
+
+        <Test></Test>
       </div>
     );
   }
