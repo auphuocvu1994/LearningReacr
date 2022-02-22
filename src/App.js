@@ -7,7 +7,7 @@ import './App.css';
 // import GridBtnAudio from './componentEx/GridBtnAudio/GridBtn';
 // import Input from './componentEx/Input/InputShowText';
 import Search from './componentEx/Search/Search';
-import Test from './componentEx/Search/Test';
+// import Test from './componentEx/Search/Test';
 
 import React from 'react';
 
@@ -32,7 +32,7 @@ class App extends React.Component {
 
         <Search></Search>
 
-        <Test></Test>
+        {/* <Test></Test> */}
       </div>
     );
   }
