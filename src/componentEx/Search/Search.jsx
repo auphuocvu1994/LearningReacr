@@ -15,6 +15,16 @@ class Search extends React.Component {
     }
 
     async componentDidMount() {
+        // try {
+        //     const rawData= await fetch('http://jsonplaceholder.typicode.com/users')
+        //     const data=rawData.json()
+        //     this.setState({ lstArr: data })
+            
+        // } catch (error) {
+        //     console.log(error)
+        // }
+
+
         await fetch('http://jsonplaceholder.typicode.com/users')
             .then(res => res.json())
             .then((data) => {

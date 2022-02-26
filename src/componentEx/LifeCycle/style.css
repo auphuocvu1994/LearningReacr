@@ -1,0 +1,63 @@
+.group-btn .btn{
+    margin: 10px 0;
+}
+
+.wrapcontent__setting {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.wrapcontent__infor {
+    text-align: center;
+}
+
+.wrapcontent__infor {
+    font-size: 48px;
+    font-family: monospace;
+}
+
+.wrapcontent__infor span {
+    display: block;
+}
+
+.wrapcontent__infor--group-btn .btn {
+    margin: 20px;
+}
+
+.wrapcontent__infor--group-btn .btn:first-of-type i:first-child {
+    margin-right: 15px;
+}
+
+
+
+#root {
+    text-align: center;
+    margin: auto;
+  }
+  
+  #titles {
+    background-image: url(http://www.webdesigndev.com/wp-content/uploads/2015/07/free-hd-backgrounds.jpg);
+      padding: 10px;
+    color: white;
+  }
+  
+  .break-session-layout {
+    color: black;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 200px 100px;
+    margin: auto;
+    width: 300px;
+    color: white;
+  }
+  
+  .background {
+      background-image: url(https://i.pinimg.com/originals/c8/26/2c/c8262c1c2fd50264f174b92203a2d18b.jpg);
+  }
+  
+  #timer-display {
+    padding: 20px;
+    background-image: url(https://i.pinimg.com/originals/8c/6a/a1/8c6aa103a249c173e16b54d5450868d3.jpg);
+      height: 100%;
+  }
