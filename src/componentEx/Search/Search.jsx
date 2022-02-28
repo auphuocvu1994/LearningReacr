@@ -25,7 +25,7 @@ class Search extends React.Component {
         // }
 
 
-        await fetch('http://jsonplaceholder.typicode.com/users')
+        await fetch('https://5df8a4c6e9f79e0014b6a587.mockapi.io/freetuts/users')
             .then(res => res.json())
             .then((data) => {
                 this.setState({ lstArr: data })

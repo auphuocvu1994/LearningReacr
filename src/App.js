@@ -7,10 +7,12 @@ import './App.css';
 // import GridBtnAudio from './componentEx/GridBtnAudio/GridBtn';
 // import Input from './componentEx/Input/InputShowText';
 // import Search from './componentEx/Search/Search';
-import Message from './componentEx/Message/Message';
+// import Message from './componentEx/Message/Message';
 // import LifeCycle from './componentEx/LifeCycle/LifeReact';
-import CountDown from './componentEx/LifeCycle/CountDown';
-import TimerControl from './componentEx/LifeCycle/TimerControl';
+// import CountDown from './componentEx/LifeCycle/CountDown';
+// import TimerControl from './componentEx/LifeCycle/TimerControl';
+// import Hook from './componentEx/FunctionComponent/Hook';
+import GetListUserUseHook from './componentEx/FunctionComponent/GetListUserUseHook';
 // import Test from './componentEx/Search/Test';
 
 import React from 'react';
@@ -35,14 +37,19 @@ class App extends React.Component {
         {/* <Input></Input> */}
 
         {/* <Search></Search> */}
-      
-        <CountDown></CountDown>
+
+        {/* <CountDown></CountDown> */}
 
 
-      <TimerControl></TimerControl>
-        <Message></Message>
+        {/* <TimerControl></TimerControl> */}
+        {/* <Message></Message> */}
         {/* <LifeCycle></LifeCycle> */}
         {/* <Test></Test> */}
+
+        {/* <Hook></Hook> */}
+
+        <GetListUserUseHook></GetListUserUseHook>
+
       </div>
     );
   }
