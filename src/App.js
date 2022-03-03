@@ -12,7 +12,8 @@ import './App.css';
 // import CountDown from './componentEx/LifeCycle/CountDown';
 // import TimerControl from './componentEx/LifeCycle/TimerControl';
 // import Hook from './componentEx/FunctionComponent/Hook';
-import GetListUserUseHook from './componentEx/FunctionComponent/GetListUserUseHook';
+// import GetListUserUseHook from './componentEx/FunctionComponent/GetListUserUseHook';
+import ToDoApp from './componentEx/ToDoList/ToDo';
 // import Test from './componentEx/Search/Test';
 
 import React from 'react';
@@ -48,8 +49,9 @@ class App extends React.Component {
 
         {/* <Hook></Hook> */}
 
-        <GetListUserUseHook></GetListUserUseHook>
+        {/* <GetListUserUseHook></GetListUserUseHook> */}
 
+        <ToDoApp></ToDoApp>
       </div>
     );
   }
