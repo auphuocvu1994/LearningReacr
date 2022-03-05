@@ -99,3 +99,21 @@ ul li>span.completed {
     text-decoration: line-through;
     color: #b6b6b6;
 }
+
+.btnDelete{
+    display:none;
+}
+
+li:hover .btnDelete{
+    display: block;
+}
+
+.disable span{
+    color: darkgray;
+    text-decoration: line-through;
+}
+
+input.form-control:focus{
+    box-shadow: none;
+}
+
