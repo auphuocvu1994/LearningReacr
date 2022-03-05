@@ -7,28 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 function ListItem(props) {
     const [show, setShow] = useState(false);
     const { name } = props;
-    const { parentCallback } = props;
-    const { listData } = props;
-
-    const handleDelete = (e) => {
-        var arrayCopy = [...listData]; // make a separate copy of the array
-
-        console.log(arrayCopy);
-
-        var index = arrayCopy.indexOf(e)
-        if (index !== -1) {
-            arrayCopy.splice(index, 1);
-            parentCallback(arrayCopy);
-        }
-
-    }
-
 
     return (
         <li className={`list-item ${show ? "disable" : ""}`} onClick={() => setShow(prev => !prev)}>
             <span>{name}</span>
             <FontAwesomeIcon className='btnDelete' icon={faTrash}
-                onClick={e => handleDelete(name)}
+
+                onClick={() => props.handleDelete(name)}
             />
         </li>
     );
@@ -58,7 +43,7 @@ export default function ToDoList(props) {
     }
     const handleAdd = (e) => {
         e.preventDefault()
-        console.log(nameOfWord)
+        // console.log(nameOfWord)
 
         setlstNote([...lstNote, nameOfWord]);
 
@@ -70,7 +55,7 @@ export default function ToDoList(props) {
     }
 
     const handleDelete = (e) => {
-        // console.log(e);
+        console.log(e);
 
         // setlstNote(arrayCopy);
 
@@ -104,7 +89,7 @@ export default function ToDoList(props) {
                                     key={item}
                                     name={item}
                                     listData={lstNote}
-                                    parentCallback={e => handleDelete()}
+                                    handleDelete={e => handleDelete()}
                                 >
                                     {/* <span>{item}</span>
                                     <FontAwesomeIcon className='btnDelete' icon={faTrash} onClick={e => handleDelete(item)} /> */}
