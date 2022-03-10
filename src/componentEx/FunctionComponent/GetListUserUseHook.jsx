@@ -137,7 +137,7 @@ export default function GetListUserUseHook(props) {
                     listFilteredUsers.map((user) => {
                         const fullName = Object.values(user.name).join(" ");
                         return (
-                            <Card style={{ width: '18rem' }}>
+                            <Card key={fullName} style={{ width: '18rem' }}>
                                 <Card.Img variant="top" src={user.picture.medium} />
                                 <Card.Body>
                                     <Card.Title>{fullName}</Card.Title>

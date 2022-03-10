@@ -34,37 +34,33 @@ export default function ToDoList(props) {
 
     }, []);
 
+    useEffect(() => {
+        localStorage.setItem('lstNote', JSON.stringify(lstNote))
+
+    }, [lstNote]);
+
+    const handleDelete = (name) => {
+        console.log(name);
+        var arrayCopy = [...lstNote]; // make a separate copy of the array
+        var index = arrayCopy.indexOf(name)
+        if (index !== -1) {
+            arrayCopy.splice(index, 1);
+            setlstNote(arrayCopy);
+        }
+    }
+
     const handleChange = (e) => {
         let value = e.target.value
 
         setNameOfWord(value);
-
-
     }
+
     const handleAdd = (e) => {
         e.preventDefault()
         // console.log(nameOfWord)
 
         setlstNote([...lstNote, nameOfWord]);
 
-        saveStorage()
-    }
-
-    const saveStorage = () => {
-        localStorage.setItem('lstNote', JSON.stringify(lstNote))
-    }
-
-    const handleDelete = (e) => {
-        console.log(e);
-
-        // setlstNote(arrayCopy);
-
-        // var arrayCopy = [...lstNote]; // make a separate copy of the array
-        // var index = arrayCopy.indexOf(e)
-        // if (index !== -1) {
-        //     arrayCopy.splice(index, 1);
-        //     setlstNote(arrayCopy);
-        // }
     }
 
     return (
@@ -89,10 +85,8 @@ export default function ToDoList(props) {
                                     key={item}
                                     name={item}
                                     listData={lstNote}
-                                    handleDelete={e => handleDelete()}
+                                    handleDelete={handleDelete}
                                 >
-                                    {/* <span>{item}</span>
-                                    <FontAwesomeIcon className='btnDelete' icon={faTrash} onClick={e => handleDelete(item)} /> */}
                                 </ListItem>
                             )
                         })

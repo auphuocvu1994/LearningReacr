@@ -1,6 +1,7 @@
 :root {
     --green: #8cc84c;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +13,6 @@ body {
     font-size: 14px;
     font-weight: normal;
     height: 100vh;
-    background: var(--green);
 }
 
 .wrapper {
@@ -48,8 +48,6 @@ input[type="text"] {
     padding: 10px 20px 10px 0;
     border: none;
     outline: none;
-    background: transparent;
-    font-size: 24px;
 }
 
 button.btn__add {
