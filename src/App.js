@@ -14,19 +14,40 @@ import Message from './componentEx/Message/Message';
 // import Hook from './componentEx/FunctionComponent/Hook';
 import GetListUserUseHook from './componentEx/FunctionComponent/GetListUserUseHook';
 import ToDoApp from './componentEx/ToDoList/ToDo';
-import Login from './componentEx/Login/Login';   
-import Register from './componentEx/Register/Register';   
+import Login from './componentEx/Login/Login';
+import Register from './componentEx/Register/Register';
 // import Test from './componentEx/Search/Test';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 import React from 'react';
 
+
+const PrivateRoute = ({ children }) => {
+  const token = localStorage.getItem('auth')
+
+  if (token) {
+    return <Navigate to={'/getListUser'} />
+  }
+
+  return children
+}
+const LogOut = ({ children }) => {
+
+  localStorage.removeItem('auth')
+
+  return children
+}
+
+
 const routerConfig = [{
   label: 'Home',
-  component: <Message />,
+  component:
+    <PrivateRoute>
+      <Login />
+    </PrivateRoute>,
   path: "/"
 },
 {
@@ -50,13 +71,24 @@ const routerConfig = [{
   path: "/login"
 },
 {
+  label: 'Logout',
+  component:
+    <LogOut>
+      <Login />
+    </LogOut>
+  ,
+  path: "/logout"
+},
+{
   label: 'Register',
-  component: <Register />,
+  component:
+    <Register />
+  ,
   path: "/register"
 }
-
-
 ]
+
+
 // Class component 
 class App extends React.Component {
   // render bat buoc phai co trong class component 

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import './style.css';
 import axios from "axios"; //Sử dụng axios
 
+
+
 export default function Login() {
 
     const [userName, setUserName] = useState([]);
@@ -21,6 +23,11 @@ export default function Login() {
             console.log(token);
 
             localStorage.setItem('auth',token);
+
+            // response.redirect('/getListUser');
+
+            // return <Navigate to={'/getListUser'} />
+
         }
 )
         .catch((err) => console.log(err));
