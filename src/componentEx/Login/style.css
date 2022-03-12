@@ -51,6 +51,8 @@ span.psw {
     padding-top: 16px;
 }
 
-form label{
+form label {
     color: white;
+    width: 100%;
+    text-align: left;
 }

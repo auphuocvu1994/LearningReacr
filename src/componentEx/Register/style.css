@@ -50,7 +50,20 @@ span.psw {
     float: right;
     padding-top: 16px;
 }
-
-form label{
+span.psw a{
     color: white;
+}
+
+form label {
+    color: white;
+    width: 100%;
+    text-align: left;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    height: fit-content;
 }

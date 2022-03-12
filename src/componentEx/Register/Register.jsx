@@ -1,23 +1,34 @@
-// import ListGroup from 'react-bootstrap/ListGroup';
-// import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './style.css';
-// import { faTrash } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
-
+import axios from "axios"; //Sử dụng axios
 
 export default function Register() {
 
+    const [userName, setUserName] = useState([]);
+    const [passWord, setPass] = useState();
+
+    const handeRegister = (e) => {
+        e.preventDefault();
+        console.log(userName, passWord);
+
+        axios.post('https://todo-nodemy.herokuapp.com/user/register', {
+            username: userName,
+            password: passWord
+
+        }).then(response => console.log(response)).catch((err) => console.log(err));
+    }
+
+
     return (
         <div className="wrapper">
-            <form method="post">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required />
+            <form>
+                <label ><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" onChange={e => setUserName(e.target.value)}  name="uname" required />
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required />
+                <label ><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" onChange={e => setPass(e.target.value)}  name="psw" required />
 
-                <button type="submit">Register</button>
+                <button onClick={handeRegister}>Register</button>
 
                 <span className="psw"><a href="/login">Login</a></span>
             </form >

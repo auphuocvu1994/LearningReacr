@@ -18,9 +18,8 @@ body {
 .wrapper {
     display: flex;
     /* align-items: center; */
-    height: 100%;
+    height: calc(100vh - 72px);
     justify-content: center;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
     background-size: cover;
     background-position: center;
     transition: 0.5s all ease-in-out;
