@@ -17,4 +17,3 @@ export const decrement = (number) => {
     };
 }; 
 
-export default increment;
